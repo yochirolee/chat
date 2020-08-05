@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://use.fontawesome.com/e3f421b222.js"></script>
+
+    
+  </head>
+  <body>
+    <div class="nav-bar-container">
+      <nav class="nav-bar">
+        <div class="logo">
+          <i class="icon fa fa-comments"></i>Chat
+        </div>
+        <div>
+          <button class='btn'>Leave Room</button>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="wrapper">
+        <div class="left-side">
+          <div>
+            <h4 class="users-h4">
+              <i class="fa fa-users icon"></i>Users
+            </h4>
+            <ul>
+              <li>Jong</li>
+              <li>Lee</li>
+              <li>Carol</li>
+              <li>Vercel</li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-side">
+           <div id="chat-messages" class='chat-messages'>
+            
+
+           </div>
+        <div class='right-side-status'>
+          <p>...is writing</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer">
+     <form id='chatForm'> 
+       <input
+          id="msg" 
+          type="text" 
+          autocomplete="off" 
+          class="text-input">
+        </input>
+       <button class="btn btn-primary" action="submit">
+         <i class="icon fa fa-paper-plane"></i>Send
+       </button> 
+    </form>
+    </div>
+  
+</html>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src='/js/main.js'></script>
+<!-- <script>
+  $(function () {
+    var socket = io();
+    $("#chatForm").submit(function (e) {
+      
+     e.preventDefault(); // prevents page reloading
+      socket.emit("chat message", $("#m").val());
+      $("#m").val("");
+      return false;
+    });
+    socket.on("chat message", function (msg) {
+      $("#messages").append($("<div class='message'> </div>").text(msg));
+    });
+  });
+</script> -->

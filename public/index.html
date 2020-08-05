@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://use.fontawesome.com/e3f421b222.js"></script>
+
+    
+  </head>
+  <body>
+    <div class="nav-bar-container">
+      <nav class="nav-bar">
+        <div class="logo">
+          <i class="icon fa fa-comments"></i>Chat
+        </div>
+        
+      </nav>
+    </div>
+    <div class="container">
+      <div class='wrapper-card'>
+        <div class='wrapper-card-header'>
+           <h3>Welcome to this Chat</h3>
+        </div>
+     <form class='form-index' method="POST"  action="chat.html"> 
+     <label>UserName</label>
+      <input id="userName"  placeholder='Enter Username...' type="text" autocomplete="off" class="input-username"></input>
+      <label>Rooms</label>
+      <select class='chat-rooms' id='rooms'  >
+        <option>
+            Nature
+        </option>
+        <option>
+            Sex
+        </option>
+        <option>
+            Money
+        </option>
+      </select>
+       <button class="btn btn-join" >
+        <i class="icon fa fa-enter"></i>Join Chat
+      </button> </form>
+    </div></div>
+   
+</html>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+ 
+</script> 
